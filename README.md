@@ -21,6 +21,6 @@ Edit your host file
 
 Add  "127.0.0.1 docker-symfony.dev"
 
-Go to your project
+Go to your project : http://docker-symfony.dev
+Go to your phpmyadmin : http://docker-symfony.dev:8181
 
-http://docker-symfony.dev
