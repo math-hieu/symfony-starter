@@ -10,13 +10,17 @@ A Basic Symfony 3.2 project initialize with docker.
    $ cd docker-symfony
 ```
 
-1. Build and run docker's containers to run symfony project
+Build and run docker's containers to run symfony project
 
 ```bash
    $ docker-compose build
    $ make start
 ```
 
-2. Edit your host file
+Edit your host file
 
 Add  "127.0.0.1 docker-symfony.dev"
+
+Go to your project
+
+http://docker-symfony.dev
