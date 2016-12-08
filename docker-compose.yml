@@ -29,3 +29,10 @@ services:
         volumes:
             - ./docker/logs/nginx/:/var/log/nginx
 
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - db
+        ports:
+            - 8181:80
+
