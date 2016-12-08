@@ -1,5 +1,22 @@
 docker-php7-symfony3
 ====================
 
-A Symfony 3.2 project created on December 8, 2016, 2:57 pm initialize with docker.
+A Basic Symfony 3.2 project initialize with docker.
 
+## Installation
+
+```bash
+   $ git clone https://github.com/math-hieu/docker-symfony.git
+   $ cd docker-symfony
+```
+
+1. Build and run docker's containers to run symfony project
+
+```bash
+   $ docker-compose build
+   $ make start
+```
+
+2. Edit your host file
+
+Add  "127.0.0.1 docker-symfony.dev"
