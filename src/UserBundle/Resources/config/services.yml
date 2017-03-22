@@ -1,0 +1,16 @@
+services:
+  user.registration.listener:
+      class: UserBundle\EventListener\RegistrationListener
+      arguments:
+        - '@session'
+        - '@doctrine.orm.entity_manager'
+      tags:
+        - { name: kernel.event_subscriber }
+
+  user.form_login_authenticator:
+      class: UserBundle\Security\FormLoginAuthenticator
+      arguments:
+        - "@router"
+        - "@security.password_encoder"
+        - "@doctrine.orm.entity_manager"
+        - "@session"

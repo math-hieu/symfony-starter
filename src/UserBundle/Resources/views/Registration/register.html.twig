@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Inscription</button>
+    {{ form_end(form) }}
+
+    <p class="register-account">
+        <a href="{{ path('user_security_login') }}" class="register-link">Vous avez déjà un compte? <strong>Connexion ici </strong><i class="fa fa-arrow-right"></i></a>
+    </p>
+{% endblock %}

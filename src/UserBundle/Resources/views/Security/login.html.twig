@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('user_security_login_check') }}" method="post" class="form-signin">
+        <h3 class="form-signin-heading">Connectez-vous à votre compte</h3>
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData) }}
+            </div>
+        {% endif %}
+        {% for flashMessage in  app.session.flashbag.get('notice') %}
+            <div class="alert alert-success" role="alert">
+                <strong>Félicitation</strong> {{ flashMessage }}
+            </div>
+        {% endfor %}
+
+        <input type="email" id="email" name="_email" value="{{ last_username }}" class="form-control" placeholder="Email"/>
+        <input type="password" id="password" name="_password" class="form-control" placeholder="Mot de passe" />
+
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Connexion</button>
+    </form>
+{% endblock %}
